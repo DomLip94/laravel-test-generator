@@ -1,25 +1,29 @@
 {
-    "name": "vigneshc91/laravel-test-generator",
+    "name": "domlip94/laravel-test-generator",
     "description": "Laravel package for generating unit test automatically",
     "license": "MIT",
     "authors": [
         {
             "name": "Vignesh C",
             "email": "vignesh.jag@gmail.com"
+        },
+        {
+            "name": "Dominic Lipscombe",
+            "email": "dom@muteg.net"
         }
     ],
     "require": {
-        "fzaninotto/faker": "^1.8"
+        "fakerphp/faker": "^1.9.1"
     },
     "autoload": {
         "psr-4": {
-            "Vigneshc91\\LaravelTestGenerator\\": "src/"
+            "DomLip94\\LaravelTestGenerator\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Vigneshc91\\LaravelTestGenerator\\TestGeneratorServiceProvider"
+                "DomLip94\\LaravelTestGenerator\\TestGeneratorServiceProvider"
             ]
         }
     }

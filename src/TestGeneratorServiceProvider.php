@@ -1,6 +1,6 @@
 <?php
 
-namespace Vigneshc91\LaravelTestGenerator;
+namespace DomLip94\LaravelTestGenerator;
 
 use Illuminate\Support\ServiceProvider;
 
