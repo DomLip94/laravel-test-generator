@@ -145,7 +145,7 @@ class TestCaseGenerator
      * @param array $rules
      * @return boolean
      */
-    protected function isEmail($rules) : bool
+    protected function isEmail($rules): bool
     {
         return in_array('email', $rules);
     }
@@ -157,7 +157,7 @@ class TestCaseGenerator
      * @param string $param
      * @return boolean
      */
-    protected function isCompanyName($rules, $param) : bool
+    protected function isCompanyName($rules, $param): bool
     {
         return strpos('company', $param) !== false && in_array('string', $rules);
     }
@@ -169,7 +169,7 @@ class TestCaseGenerator
      * @param string $param
      * @return boolean
      */
-    protected function isAddress($rules, $param) : bool
+    protected function isAddress($rules, $param): bool
     {
         return strpos('address', $param) !== false && in_array('string', $rules);
     }
@@ -181,7 +181,7 @@ class TestCaseGenerator
      * @param string $param
      * @return boolean
      */
-    protected function isName($rules, $param) : bool
+    protected function isName($rules, $param): bool
     {
         return strpos('name', $param) !== false && in_array('string', $rules);
     }
@@ -193,7 +193,7 @@ class TestCaseGenerator
      * @param string $param
      * @return boolean
      */
-    protected function isStreetName($rules, $param) : bool
+    protected function isStreetName($rules, $param): bool
     {
         return strpos('street', $param) !== false && in_array('string', $rules);
     }
@@ -205,7 +205,7 @@ class TestCaseGenerator
      * @param string $param
      * @return boolean
      */
-    protected function isStreetAddress($rules, $param) : bool
+    protected function isStreetAddress($rules, $param): bool
     {
         return strpos('street_address', $param) !== false && in_array('string', $rules);
     }
@@ -217,7 +217,7 @@ class TestCaseGenerator
      * @param string $param
      * @return boolean
      */
-    protected function isCity($rules, $param) : bool
+    protected function isCity($rules, $param): bool
     {
         return strpos('city', $param) !== false && in_array('string', $rules);
     }
@@ -229,7 +229,7 @@ class TestCaseGenerator
      * @param string $param
      * @return boolean
      */
-    protected function isState($rules, $param) : bool
+    protected function isState($rules, $param): bool
     {
         return strpos('state', $param) !== false && in_array('string', $rules);
     }
@@ -241,7 +241,7 @@ class TestCaseGenerator
      * @param string $param
      * @return boolean
      */
-    protected function isCountry($rules, $param) : bool
+    protected function isCountry($rules, $param): bool
     {
         return strpos('country', $param) !== false && in_array('string', $rules);
     }
@@ -253,7 +253,7 @@ class TestCaseGenerator
      * @param string $param
      * @return boolean
      */
-    protected function isZip($rules, $param) : bool
+    protected function isZip($rules, $param): bool
     {
         return (strpos('zip', $param) !== false || strpos('pin', $param) !== false ) && in_array('string', $rules);
     }
@@ -264,7 +264,7 @@ class TestCaseGenerator
      * @param string $param
      * @return boolean
      */
-    protected function isLatitude($param) : bool
+    protected function isLatitude($param): bool
     {
         return strpos('latitude', $param) !== false;
     }
@@ -275,7 +275,7 @@ class TestCaseGenerator
      * @param string $param
      * @return boolean
      */
-    protected function isLongitude($param) : bool
+    protected function isLongitude($param): bool
     {
         return strpos('longitude', $param) !== false;
     }
@@ -286,7 +286,7 @@ class TestCaseGenerator
      * @param string $param
      * @return boolean
      */
-    protected function isPhone($param) : bool
+    protected function isPhone($param): bool
     {
         return strpos('phone', $param) !== false || strpos('mobile', $param) !== false;
     }
@@ -297,7 +297,7 @@ class TestCaseGenerator
      * @param array $rules
      * @return boolean
      */
-    protected function isBoolean($rules) : bool
+    protected function isBoolean($rules): bool
     {
         return in_array('boolean', $rules);
     }
@@ -308,7 +308,7 @@ class TestCaseGenerator
      * @param array $rules
      * @return boolean
      */
-    protected function isDate($rules) : bool
+    protected function isDate($rules): bool
     {
         return in_array('date', $rules);
     }
@@ -319,7 +319,7 @@ class TestCaseGenerator
      * @param array $rules
      * @return boolean
      */
-    protected function isDateFormat($rules) : bool
+    protected function isDateFormat($rules): bool
     {
         $format = array_filter($rules, function($val){
             return preg_match('/^date_format/', $val);

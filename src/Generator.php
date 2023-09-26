@@ -6,6 +6,7 @@ use ReflectionMethod;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Str;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Routing\RouteCollection;
 use DomLip94\LaravelTestGenerator\TestCaseGenerator;
 
 class Generator
@@ -104,7 +105,7 @@ class Generator
      * @param array $middlewares
      * @return boolean
      */
-    protected function isAuthorizationExist($middlewares) : bool
+    protected function isAuthorizationExist($middlewares): bool
     {
         return (bool) array_filter(
             $middlewares,
@@ -118,7 +119,7 @@ class Generator
      * @param string $uri
      * @return string
      */
-    protected function strip_optional_char($uri) : string
+    protected function strip_optional_char($uri): string
     {
         return str_replace('?', '', $uri);
     }
@@ -128,7 +129,7 @@ class Generator
      *
      * @return array
      */
-    protected function getAppRoutes() : array
+    protected function getAppRoutes(): array|RouteCollection
     {
         return app('router')->getRoutes();
     }
@@ -139,7 +140,7 @@ class Generator
      * @param Route $route
      * @return string
      */
-    protected function getRouteUri(Route $route) : string
+    protected function getRouteUri(Route $route): string
     {
         $uri = $route->uri();
 
@@ -156,7 +157,7 @@ class Generator
      * @param string|mixed $action
      * @return array
      */
-    protected function getFormRules($action) : array
+    protected function getFormRules($action): array
     {
         if (!is_string($action)) return [];
         
